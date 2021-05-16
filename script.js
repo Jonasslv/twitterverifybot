@@ -1,5 +1,3 @@
-// Get User objects by username, using bearer token authentication
-// https://developer.twitter.com/en/docs/twitter-api/users/lookup/quick-start
 
 const needle = require('needle');
 const fs = require('fs');
@@ -70,6 +68,7 @@ function validTwitterUser(sn) {
                 getRequest(baseEndpointURL+usersURL).then((result) =>{
                     if(result.data){
                         result.data.forEach((data) => {
+                            //if it has details means the user don`t exists
                             if(!data.details){
                                 console.log(data.username);
                             }

@@ -1,0 +1,23 @@
+{
+  "name": "twitterverifybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonasslv/twitterverifybot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonasslv/twitterverifybot/issues"
+  },
+  "homepage": "https://github.com/Jonasslv/twitterverifybot#readme",
+  "dependencies": {
+    "needle": "^2.6.0"
+  }
+}
