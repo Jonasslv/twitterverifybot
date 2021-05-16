@@ -26,9 +26,6 @@ try {
     console.error(err);
 }
 
-// The code below sets the bearer token from your environment variables
-// To set environment variables on macOS or Linux, run the export command below from the terminal:
-// export BEARER_TOKEN='YOUR-TOKEN'
 const settings = JSON.parse(fs.readFileSync(`./settings.json`));
 
 async function getRequest(endpointURL) {
