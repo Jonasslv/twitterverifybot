@@ -63,15 +63,17 @@ function validTwitterUser(sn) {
             usersURL += `${user}${(usersLoaded == 100) || (totalUsers >= listusers.length-1)? '':','}`;
         }
         if ((usersLoaded === 100) || (totalUsers >= listusers.length-1)) {
+            //be sure the last character is not a comma
+            let hascomma = usersURL.substring(usersURL.length,usersURL.length-1);
+            if(hascomma == `,`){
+                usersURL = usersURL.substring(0,usersURL.length-1);
+            }
             try {
                 // Make request
                 getRequest(baseEndpointURL+usersURL).then((result) =>{
                     if(result.data){
                         result.data.forEach((data) => {
-                            //if it has details means the user don`t exists
-                            if(!data.details){
-                                console.log(data.username);
-                            }
+                            console.log(data.username);
                         });
                     }
                 });
